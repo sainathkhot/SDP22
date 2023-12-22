@@ -1,0 +1,17 @@
+class Except {
+	public static void divide(int x, int y) {
+		int z = x / y;
+		System.out.println(z);
+	}
+
+	public static void main(String[] args) {
+			divide(10, 0);
+	}
+}
+
+
+
+Runtime Exception
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+at Except.divide(myCode.java:3)
+at Except.main(myCode.java:8)

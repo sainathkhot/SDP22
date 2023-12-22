@@ -1,0 +1,38 @@
+class Demo {
+	final int tenure = 0;
+	double principal;
+	float interestRate;
+	String accountNumber;
+	final double calculateEMI(){
+		return 2000;
+	}
+}
+
+  class Demo2 extends Demo{
+  
+  // Error as  final method is overriding
+  double calculateEMI(){
+		return 8000;
+	}
+  
+  }	
+
+class FinalDemo{
+	public static void main(String[] args) {
+		Demo d = new Demo();
+		d.tenure = 1;		//Error as tenure is final 
+		System.out.println(d.tenure);
+		System.out.println(d.calculateEMI());
+	}
+}
+
+
+Runtime Exception
+myCode.java:14: error: calculateEMI() in Demo2 cannot override calculateEMI() in Demo
+double calculateEMI(){
+^
+overridden method is final
+myCode.java:23: error: cannot assign a value to final variable tenure
+d.tenure = 1; //Error as tenure is final
+^
+2 errors

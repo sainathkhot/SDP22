@@ -1,0 +1,30 @@
+class Account {
+  public static void main(String[] args) {
+    double balance = 6000, rateOfInterest = 0.10, interest = 0;
+    double withdrawal = 500, deposit = 600;
+    for(int i = 1; i <= 12; ++i) {
+      balance += deposit;
+      balance -= deposit;
+      interest = balance * rateOfInterest;
+      balance += interest;
+      System.out.println("The interest for the month " + i + " is " + interest);
+    }
+    System.out.println("The balance at the end of the year is " + balance);
+  }
+}
+
+Output:
+
+The interest for the month 1 is 600.0
+The interest for the month 2 is 660.0
+The interest for the month 3 is 726.0
+The interest for the month 4 is 798.6
+The interest for the month 5 is 878.46
+The interest for the month 6 is 966.3060000000002
+The interest for the month 7 is 1062.9366000000002
+The interest for the month 8 is 1169.2302600000003
+The interest for the month 9 is 1286.1532860000004
+The interest for the month 10 is 1414.7686146000005
+The interest for the month 11 is 1556.2454760600006
+The interest for the month 12 is 1711.8700236660006
+The balance at the end of the year is 18830.570260326007
